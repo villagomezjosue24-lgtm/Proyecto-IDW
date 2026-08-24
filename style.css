@@ -633,48 +633,48 @@ p {
 
     .contenido-central {
         display: flex !important;
-        padding: 10px 10px 20px 10px !important;
-        width: 100%;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 10px 12px 20px 12px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
-    /* =========================================
-       TARJETAS VERTICALES (3 por fila compactas)
-       ========================================= */
     .catalogo-tarjetas {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important; 
-        gap: 6px !important; 
+        gap: 5px !important; 
         width: 100% !important;
+        max-width: 100% !important;
         padding: 0 !important;
+        box-sizing: border-box !important;
     }
 
     .tarjeta {
         padding: 6px !important;
-        gap: 4px !important;
+        gap: 3px !important;
+        box-sizing: border-box !important;
     }
 
     .img-producto {
-        height: 70px !important; 
-        border-radius: 8px !important;
+        height: 65px !important; 
+        border-radius: 6px !important;
     }
 
     .tarjeta h3 {
-        font-size: 11px !important; 
+        font-size: 10px !important; 
         line-height: 1.1 !important;
     }
 
     .descripcion-producto {
-        font-size: 9px !important; 
-        line-height: 1.2 !important;
+        font-size: 8px !important; 
+        line-height: 1.1 !important;
     }
 
     .precio-tarjetas {
-        font-size: 12px !important; 
+        font-size: 11px !important; 
     }
 
-    /* =========================================
-       MENÚ CARRUSEL COMPACTO
-       ========================================= */
     .contenedor-carrusel {
         gap: 4px !important;
         margin-bottom: 15px !important;
@@ -700,9 +700,6 @@ p {
         font-size: 10px !important;
     }
 
-    /* =========================================
-       RESUMEN DE CARRITO (Ancho completo, sin huecos)
-       ========================================= */
     .resumen-carrito {
         width: 100% !important;
         max-width: 100% !important;
@@ -720,5 +717,29 @@ p {
         min-width: 45px !important;
         object-fit: cover !important;
         border-radius: 6px !important;
+    }
+
+    .formulario {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 15px !important;
+        box-sizing: border-box !important;
+        gap: 12px !important;
+    }
+
+    .formulario h2 {
+        grid-column: unset !important;
+    }
+
+    .campo, .campo-completo {
+        width: 100% !important;
+        grid-column: unset !important;
+    }
+
+    .campo input, .campo textarea {
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 }
