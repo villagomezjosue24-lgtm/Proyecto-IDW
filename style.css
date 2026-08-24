@@ -602,41 +602,41 @@ p {
 @media (max-width: 768px) {
     .contenedor-principal, .contenedor-principal2 {
         flex-direction: column;
-        min-height: 100vh;
+        min-height: auto;
     }
+    
+    /* 1. MANDAMOS EL MENÚ BIEN ARRIBA Y QUITAMOS EL ESPACIO EXTRA */
     .barra-lateral {
         width: 100% !important;
         min-width: 100% !important;
-        height: 100vh; 
+        height: auto !important; /* Ya no ocupa toda la pantalla forzado */
         display: flex;
         flex-direction: column;
-        justify-content: center; 
-        align-items: center;     
+        align-items: center;
         text-align: center;
-        padding: 40px 20px;
-        box-sizing: border-box;
+        padding: 20px 20px 10px 20px !important; /* Poco espacio arriba y abajo */
         border-right: none;
     }
 
     .barra-lateral a {
-        font-size: 24px !important; 
+        font-size: 20px !important;
     }
 
     .barra-lateral li {
-        margin-bottom: 30px;
+        margin-bottom: 15px !important; /* Achicamos la separación entre los links */
     }
 
+    /* 2. SUBIMOS EL BLOQUE "SABÍAS QUE" Y QUITAMOS MÁRGENES */
     .curiosidades {
-        margin-top: 30px;
+        margin-top: 15px !important;
+        margin-bottom: 0 !important;
         max-width: 280px;
     }
 
-    .curiosidades h2 {
-        text-align: center;
-    }
-.contenido-central {
+    /* 3. PEGAMOS "NUESTRA HISTORIA" JUSTO ABAJO */
+    .contenido-central {
         display: flex !important;
-        padding: 20px;
+        padding: 10px 20px 20px 20px !important; /* Casi sin espacio superior */
         width: 100%;
     }
 }
