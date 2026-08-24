@@ -633,77 +633,92 @@ p {
 
     .contenido-central {
         display: flex !important;
-        padding: 10px 15px 20px 15px !important;
+        padding: 10px 10px 20px 10px !important;
         width: 100%;
     }
+
+    /* =========================================
+       TARJETAS VERTICALES (3 por fila compactas)
+       ========================================= */
     .catalogo-tarjetas {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important; 
-        gap: 4px !important; 
+        gap: 6px !important; 
         width: 100% !important;
-        padding: 2px !important;
+        padding: 0 !important;
     }
 
     .tarjeta {
-        padding: 8px !important;
-        gap: 6px !important;
+        padding: 6px !important;
+        gap: 4px !important;
     }
 
     .img-producto {
-        height: 80px !important; 
+        height: 70px !important; 
+        border-radius: 8px !important;
     }
 
     .tarjeta h3 {
-        font-size: 12px !important; 
+        font-size: 11px !important; 
+        line-height: 1.1 !important;
     }
 
     .descripcion-producto {
-        font-size: 10px !important; 
+        font-size: 9px !important; 
+        line-height: 1.2 !important;
     }
 
     .precio-tarjetas {
-        font-size: 13px !important; 
+        font-size: 12px !important; 
     }
-    
+
+    /* =========================================
+       MENÚ CARRUSEL COMPACTO
+       ========================================= */
     .contenedor-carrusel {
-        gap: 5px !important;
-        margin-bottom: 20px !important;
-        padding-top: 5px !important;
+        gap: 4px !important;
+        margin-bottom: 15px !important;
+        padding-top: 0 !important;
         width: 100% !important;
     }
 
     .menu-categorias {
-        gap: 8px !important; 
+        gap: 6px !important; 
         padding: 2px !important;
         max-width: 100% !important;
     }
 
     .btn-categoria {
-        padding: 6px 12px !important; 
-        font-size: 12px !important;   
-        border-radius: 18px !important;
+        padding: 5px 10px !important; 
+        font-size: 11px !important;   
+        border-radius: 15px !important;
     }
 
     .flecha-scroll {
-        width: 28px !important;
-        height: 28px !important;
-        font-size: 11px !important;
+        width: 26px !important;
+        height: 26px !important;
+        font-size: 10px !important;
     }
-    
+
+    /* =========================================
+       RESUMEN DE CARRITO (Ancho completo, sin huecos)
+       ========================================= */
+    .resumen-carrito {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 0 15px 0 !important;
+        padding: 15px 12px !important;
+        border-radius: 0 0 16px 16px !important;
+        box-shadow: none !important;
+    }
+
     .resumen-carrito .img-mini, 
     .item-resumen img, 
     .lista-productos-resumen img {
-        width: 50px !important;
-        height: 50px !important;
-        min-width: 50px !important;
+        width: 45px !important;
+        height: 45px !important;
+        min-width: 45px !important;
         object-fit: cover !important;
-        border-radius: 8px !important;
-    }
-
-    .resumen-carrito {
-        width: 92% !important;
-        max-width: 100% !important;
-        margin: 20px auto !important;
-        padding: 20px 15px !important;
+        border-radius: 6px !important;
     }
 }
