@@ -600,43 +600,69 @@ p {
 }
 
 @media (max-width: 768px) {
-    .contenedor-principal, .contenedor-principal2 {
-        flex-direction: column;
-        min-height: auto;
+    /* 1. Volvemos las tarjetas a una sola columna pero apaisadas (horizontales) */
+    .catalogo-tarjetas {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+        padding: 10px;
     }
-    
-    /* 1. MANDAMOS EL MENÚ BIEN ARRIBA Y QUITAMOS EL ESPACIO EXTRA */
-    .barra-lateral {
-        width: 100% !important;
-        min-width: 100% !important;
-        height: auto !important; /* Ya no ocupa toda la pantalla forzado */
-        display: flex;
-        flex-direction: column;
+
+    /* 2. Convertimos la tarjeta en formato horizontal (Flexbox fila) */
+    .tarjeta {
+        flex-direction: row !important; /* Imagen a la izquierda, contenido a la derecha */
         align-items: center;
-        text-align: center;
-        padding: 20px 20px 10px 20px !important; /* Poco espacio arriba y abajo */
-        border-right: none;
+        padding: 12px !important;
+        gap: 12px !important;
     }
 
-    .barra-lateral a {
-        font-size: 20px !important;
+    /* 3. Achicamos la imagen para que actúe como miniatura al costado */
+    .img-producto {
+        width: 90px !important;  /* Ancho fijo de miniatura */
+        height: 90px !important; /* Alto fijo cuadrado */
+        min-width: 90px;
+        border-radius: 10px;
     }
 
-    .barra-lateral li {
-        margin-bottom: 15px !important; /* Achicamos la separación entre los links */
+    /* 4. Agrupamos y reordenamos los textos al costado de la imagen */
+    .tarjeta .titulo-precio {
+        flex-direction: column !important; /* Título arriba, precio abajo */
+        align-items: flex-start !important;
+        gap: 2px !important;
+        margin: 0 !important;
     }
 
-    /* 2. SUBIMOS EL BLOQUE "SABÍAS QUE" Y QUITAMOS MÁRGENES */
-    .curiosidades {
-        margin-top: 15px !important;
-        margin-bottom: 0 !important;
-        max-width: 280px;
+    .tarjeta h3 {
+        font-size: 15px !important;
     }
 
-    /* 3. PEGAMOS "NUESTRA HISTORIA" JUSTO ABAJO */
-    .contenido-central {
-        display: flex !important;
-        padding: 10px 20px 20px 20px !important; /* Casi sin espacio superior */
-        width: 100%;
+    .precio-tarjetas {
+        font-size: 16px !important;
+        color: #9b482f !important; /* Destacamos el precio en tu color principal */
+    }
+
+    /* Ocultamos temporalmente la descripción muy larga si satura, o la dejamos corta */
+    .descripcion-producto {
+        font-size: 11px !important;
+        -webkit-line-clamp: 1 !important; /* Máximo 1 línea para mantener prolijo */
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    /* 5. Estilo compacto para los botones de cantidad y agregar dentro de la tarjeta horizontal */
+    .acciones-carrito {
+        flex-direction: row !important;
+        gap: 6px !important;
+        margin-top: 5px;
+    }
+
+    .contador-item {
+        padding: 4px 8px !important;
+        gap: 8px !important;
+    }
+
+    .btn-agregar {
+        padding: 6px 10px !important;
+        font-size: 11px !important;
     }
 }
