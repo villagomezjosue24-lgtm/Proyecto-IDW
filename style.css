@@ -613,37 +613,42 @@ p {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: 20px 20px 10px 20px !important;
+        padding: 15px 10px 5px 10px !important;
         border-right: none;
     }
 
     .barra-lateral a {
-        font-size: 20px !important;
+        font-size: 18px !important;
     }
 
     .barra-lateral li {
-        margin-bottom: 15px !important;
+        margin-bottom: 10px !important;
     }
 
     .curiosidades {
-        margin-top: 15px !important;
+        margin-top: 10px !important;
         margin-bottom: 0 !important;
-        max-width: 280px;
+        max-width: 260px;
     }
 
+    /* CONTENEDOR CENTRAL AJUSTADO AL ANCHO DEL RESUMEN */
     .contenido-central {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
-        padding: 10px 12px 20px 12px !important;
+        padding: 5px 8px 15px 8px !important;
         width: 100% !important;
         box-sizing: border-box !important;
+        overflow-x: hidden !important;
     }
 
+    /* =========================================
+       CATÁLOGO Y 3 TARJETAS EXACTAMENTE DENTRO DEL ANCHO
+       ========================================= */
     .catalogo-tarjetas {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important; 
-        gap: 5px !important; 
+        gap: 4px !important; 
         width: 100% !important;
         max-width: 100% !important;
         padding: 0 !important;
@@ -651,95 +656,121 @@ p {
     }
 
     .tarjeta {
-        padding: 6px !important;
+        padding: 5px !important;
         gap: 3px !important;
         box-sizing: border-box !important;
+        border-radius: 10px !important;
     }
 
     .img-producto {
-        height: 65px !important; 
+        height: 55px !important; 
         border-radius: 6px !important;
     }
 
     .tarjeta h3 {
-        font-size: 10px !important; 
+        font-size: 9px !important; 
         line-height: 1.1 !important;
     }
 
     .descripcion-producto {
-        font-size: 8px !important; 
+        font-size: 7.5px !important; 
         line-height: 1.1 !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
     }
 
     .precio-tarjetas {
-        font-size: 11px !important; 
+        font-size: 10px !important; 
     }
 
-    .contenedor-carrusel {
+    /* =========================================
+       BOTONES Y CONTADOR (- 0 +) COMPACTOS
+       ========================================= */
+    .acciones-carrito {
+        flex-direction: column !important;
+        gap: 3px !important;
+        margin-top: 4px !important;
+    }
+
+    /* Achicamos el contador [- 0 +] */
+    .contador-item {
+        padding: 2px 4px !important;
         gap: 4px !important;
-        margin-bottom: 15px !important;
+        border-radius: 15px !important;
+        font-size: 10px !important;
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    .contador-item span {
+        font-size: 11px !important;
+        padding: 0 2px !important;
+    }
+
+    .cantidad {
+        font-size: 10px !important;
+        min-width: 15px !important;
+    }
+
+    /* Botón de agregar al carrito del mismo tamaño proporcional */
+    .btn-agregar {
+        padding: 3px 6px !important;
+        font-size: 9px !important;
+        border-radius: 12px !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    /* =========================================
+       MENÚ CARRUSEL COMPACTO
+       ========================================= */
+    .contenedor-carrusel {
+        gap: 3px !important;
+        margin-bottom: 10px !important;
         padding-top: 0 !important;
         width: 100% !important;
     }
 
     .menu-categorias {
-        gap: 6px !important; 
+        gap: 4px !important; 
         padding: 2px !important;
         max-width: 100% !important;
     }
 
     .btn-categoria {
-        padding: 5px 10px !important; 
-        font-size: 11px !important;   
-        border-radius: 15px !important;
+        padding: 4px 8px !important; 
+        font-size: 10px !important;   
+        border-radius: 12px !important;
     }
 
     .flecha-scroll {
-        width: 26px !important;
-        height: 26px !important;
-        font-size: 10px !important;
+        width: 22px !important;
+        height: 22px !important;
+        font-size: 9px !important;
     }
 
+    /* =========================================
+       RESUMEN DE CARRITO (Ancho completo alineado)
+       ========================================= */
     .resumen-carrito {
         width: 100% !important;
         max-width: 100% !important;
-        margin: 0 0 15px 0 !important;
-        padding: 15px 12px !important;
-        border-radius: 0 0 16px 16px !important;
+        margin: 0 0 10px 0 !important;
+        padding: 12px 10px !important;
+        border-radius: 0 0 14px 14px !important;
         box-shadow: none !important;
+        box-sizing: border-box !important;
     }
 
     .resumen-carrito .img-mini, 
     .item-resumen img, 
     .lista-productos-resumen img {
-        width: 45px !important;
-        height: 45px !important;
-        min-width: 45px !important;
+        width: 40px !important;
+        height: 40px !important;
+        min-width: 40px !important;
         object-fit: cover !important;
         border-radius: 6px !important;
-    }
-
-    .formulario {
-        display: flex !important;
-        flex-direction: column !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 15px !important;
-        box-sizing: border-box !important;
-        gap: 12px !important;
-    }
-
-    .formulario h2 {
-        grid-column: unset !important;
-    }
-
-    .campo, .campo-completo {
-        width: 100% !important;
-        grid-column: unset !important;
-    }
-
-    .campo input, .campo textarea {
-        width: 100% !important;
-        box-sizing: border-box !important;
     }
 }
