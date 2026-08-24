@@ -1,64 +1,53 @@
-// ==========================================
-// APARTADO DE NOSOTROS.HTML (Formulario)
-// ==========================================
-const formulario = document.querySelector('.formulario');
+// APARTADO DE  FORMULARIO
+const formulario = document.getElementById('formulario-contacto'); // Asegúrate de que el form tenga este ID en el HTML
 const mensajeAlerta = document.getElementById('mensaje-alerta');
 
 if (formulario && mensajeAlerta) {
     formulario.addEventListener('submit', function (event) {
         event.preventDefault();
 
+        // Validaciones previas que ya tenías
         const nombre = document.getElementById('nombre').value.trim();
         const apellido = document.getElementById('apellido').value.trim();
         const email = document.getElementById('email').value.trim();
         const telefono = document.getElementById('telefono').value.trim();
         const campoMensaje = document.getElementById('campo-mensaje').value.trim();
-        // 1. VALIDACIÓN MANUAL (Seguridad a prueba de balas)
+
         if (!nombre || !apellido || !email || !telefono || !campoMensaje) {
             mensajeAlerta.textContent = 'Por favor, completa todos los campos.';
             mensajeAlerta.style.color = 'red';
-            return; // Frena todo aquí y no intenta enviar
+            return;
         }
+
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
-            mensajeAlerta.textContent = 'Por favor, incluye un signo "@" y un dominio válido en tu correo.';
+            mensajeAlerta.textContent = 'Por favor, ingresa un correo electrónico válido.';
             mensajeAlerta.style.color = 'red';
             return;
         }
 
         const telefonoLimpio = telefono.replace(/[\s\-\+]/g, '');
         const soloNumeros = /^[0-9]+$/;
+
         if (!soloNumeros.test(telefonoLimpio) || telefonoLimpio.length < 7) {
-            mensajeAlerta.textContent = 'Por favor, ingresa un teléfono válido (solo números).';
+            mensajeAlerta.textContent = 'Por favor, ingresa un número de teléfono válido (solo números).';
             mensajeAlerta.style.color = 'red';
             return;
         }
-        // Si todo está bien, limpiamos cualquier mensaje rojo anterior
-        mensajeAlerta.textContent = '';
 
-        // --- INTEGRACIÓN DE EMAILJS ---
+        // --- INTEGRACIÓN DE EMAILJS (Usando sendForm) ---
         const btnSubmit = formulario.querySelector('button[type="submit"]');
         btnSubmit.textContent = 'Enviando...';
         btnSubmit.disabled = true;
 
-        // Empaquetamos los datos que coinciden con las variables de EmailJS
-        const parametrosFormulario = {
-            nombre: nombre,
-            apellido: apellido,
-            email: email,
-            telefono: telefono,
-            mensaje: campoMensaje
-        };
-
-        emailjs.send('service_yp3o96m', 'template_mmjhxmg', parametrosFormulario)
+        // 'this' hace referencia al formulario y toma automáticamente los 'name' de cada input
+        emailjs.sendForm('service_yp3o96m', 'template_mmjhxmg', this)
             .then(() => {
                 mensajeAlerta.textContent = '¡Mensaje enviado con éxito!';
                 mensajeAlerta.style.color = 'green';
                 formulario.reset();
-                if (btnSubmit) {
-                    btnSubmit.textContent = 'Enviar';
-                    btnSubmit.disabled = false;
-                }
+                btnSubmit.textContent = 'Enviar';
+                btnSubmit.disabled = false;
 
                 setTimeout(() => { mensajeAlerta.textContent = ''; }, 5000);
             })
@@ -66,14 +55,11 @@ if (formulario && mensajeAlerta) {
                 console.error('Error al enviar el correo:', error);
                 mensajeAlerta.textContent = 'Hubo un error al enviar el mensaje. Inténtalo de nuevo.';
                 mensajeAlerta.style.color = 'red';
-                if (btnSubmit) {
-                    btnSubmit.textContent = 'Enviar';
-                    btnSubmit.disabled = false;
-                }
+                btnSubmit.textContent = 'Enviar';
+                btnSubmit.disabled = false;
             });
     });
 }
-
 // ==========================================
 //  APARTADO DE CARRITO Y CATALOGO
 // ==========================================
