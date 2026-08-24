@@ -666,3 +666,33 @@ p {
 .precio-tarjetas {
     font-size: 12px !important;
 }
+/* =========================================
+       MENÚ CARRUSEL COMPACTO (4 palabras visibles)
+       ========================================= */
+    .contenedor-carrusel {
+        gap: 5px !important;
+        margin-bottom: 20px !important;
+        padding-top: 5px !important;
+        width: 100% !important;
+    }
+
+    .menu-categorias {
+        gap: 8px !important; /* Menos espacio entre botones */
+        padding: 2px !important;
+        max-width: 100% !important;
+    }
+
+    /* Achicamos los botones para que entren 4 en fila */
+    .btn-categoria {
+        padding: 6px 12px !important; /* Menos relleno interno */
+        font-size: 12px !important;   /* Letra más compacta */
+        border-radius: 18px !important;
+    }
+
+    /* Achicamos también un poco las flechas de desplazamiento lateral */
+    .flecha-scroll {
+        width: 28px !important;
+        height: 28px !important;
+        font-size: 11px !important;
+    }
+}
