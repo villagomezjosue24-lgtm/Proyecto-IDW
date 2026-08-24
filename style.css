@@ -598,3 +598,43 @@ p {
     font-weight: 400;
     font-size: 15px
 }
+
+@media (max-width: 768px) {
+    .contenedor-principal, .contenedor-principal2 {
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    .barra-lateral {
+        width: 100% !important;
+        min-width: 100% !important;
+        height: 100vh; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;     
+        text-align: center;
+        padding: 40px 20px;
+        box-sizing: border-box;
+        border-right: none;
+    }
+
+    .barra-lateral a {
+        font-size: 24px !important; 
+    }
+
+    .barra-lateral li {
+        margin-bottom: 30px;
+    }
+
+    .curiosidades {
+        margin-top: 30px;
+        max-width: 280px;
+    }
+
+    .curiosidades h2 {
+        text-align: center;
+    }
+    .contenido-central {
+        display: none; 
+    }
+}
