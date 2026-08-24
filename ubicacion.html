@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicación - Cafeteria Notables</title>
+
+    <!-- Vincular el CSS para que mantenga el estilo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="contenedor-principal">
+        <!-- LADO IZQUIERDO: Menú de navegación -->
+        <nav class="barra-lateral">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="carta.html">Carta</a></li>
+                <li><a href="ubicacion.html">Ubicación</a></li>
+            </ul>
+            <div class="curiosidades margen-extra"> <!-- catalogo -->
+                <h2> Sabias que? ....</h2>
+                <div class="cajita">
+                    <p id="texto-curiosidad">El café es la segunda bebida más consumida en el mundo después del agua.
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <!-- Aquí cambia el contenido derecho -->
+        <main class="contenido-central">
+            <h1> Nuestra Ubicación</h1>
+            <p>
+                Nos encontramos al frente de la <strong>Plaza Alvarado</strong>, es una zona de fácil acceso y con
+                estacionamiento cercano.
+                Ciudad de Salta, Argentina.
+            </p>
+            <h2>🗺 Cómo Llegar</h2>
+            <p>
+                Si vienes en transporte público, puedes tomar cualquier colectivo de la línea 5A, que tienen parada en
+                la esquina de caseros y coronel moldes/Republica de siria.
+                Para quienes prefieran caminar, estamos a solo 25 minutos del centro de la ciudad de Salta.
+            </p>
+            <p>
+                Puedes encontrarnos fácilmente utilizando Google Maps.
+            </p>
+
+            <!-- Mapa interactivo de Google Maps integrado -->
+            <div class="contenedor-mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.564123512345!2d-65.4278569!3d-24.7891194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bc30f098964b1%3A0xdd1e3725885c69de!2sNotables!5e0!3m2!1ses!2sar!4v1710000000000!5m2!1ses!2sar"
+                    width="100%" height="350" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <br>
+            <a href="https://www.google.com/maps/place/Notables/@-24.7891194,-65.4278569,19z/data=!4m6!3m5!1s0x941bc30f098964b1:0xdd1e3725885c69de!8m2!3d-24.7891193!4d-65.4275252!16s%2Fg%2F11yd19qvqw?entry=ttu&g_ep=EgoyMDI2MDgwNC4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank">
+            </a>
+
+            <h2>📍 Dirección</h2>
+            <p>
+                Calle Coronel Moldes 45 entre Calles Caseros y Alvarado
+            </p>
+
+        </main>
+    </div>
+    <!-- Botón flotante del carrito en la esquina inferior derecha -->
+    <div class="contenedor-carrito">
+        <a href="carrito.html" class="icono-carrito" title="Ver mi pedido">
+            🛒
+            <span id="contador-carrito">0</span>
+        </a>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
