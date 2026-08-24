@@ -639,33 +639,30 @@ p {
        TARJETAS VERTICALES: IMAGEN ARRIBA, TEXTOS ABAJO
        ========================================= */
 .catalogo-tarjetas {
-        display: grid !important;
-        /* Cambiamos a 3 columnas automáticas con un tamaño mínimo más compacto */
-        grid-template-columns: repeat(3, 1fr) !important; 
-        gap: 8px !important; /* Espacio más chico entre tarjetas para que entren bien */
-        width: 100% !important;
-        padding: 5px !important;
-    }
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important; 
+    gap: 4px !important; /* Espacio mínimo para ganar lugar */
+    width: 100% !important;
+    padding: 2px !important;
+}
 
-    /* Ajustamos un poco los textos e imágenes para que entren perfectos de a 3 */
-    .tarjeta {
-        padding: 8px !important;
-        gap: 6px !important;
-    }
+.tarjeta {
+    padding: 6px !important;
+    gap: 4px !important;
+}
 
-    .img-producto {
-        height: 80px !important; /* Imagen un poquito más chica para el formato de 3 columnas */
-    }
+.img-producto {
+    height: 65px !important; /* Imagen más compacta para que entren los 3 */
+}
 
-    .tarjeta h3 {
-        font-size: 12px !important; /* Título compacto */
-    }
+.tarjeta h3 {
+    font-size: 11px !important; /* Título pequeño */
+}
 
-    .descripcion-producto {
-        font-size: 10px !important; /* Descripción pequeña y legible */
-    }
+.descripcion-producto {
+    font-size: 9px !important; /* Descripción muy compacta */
+}
 
-    .precio-tarjetas {
-        font-size: 13px !important; /* Precio destacado pero compacto */
-    }
+.precio-tarjetas {
+    font-size: 12px !important;
 }
