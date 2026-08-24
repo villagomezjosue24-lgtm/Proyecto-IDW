@@ -624,7 +624,6 @@ p {
     .barra-lateral li {
         margin-bottom: 15px !important;
     }
-
     .curiosidades {
         margin-top: 15px !important;
         margin-bottom: 0 !important;
@@ -636,82 +635,37 @@ p {
         padding: 10px 15px 20px 15px !important;
         width: 100%;
     }
-
     /* =========================================
        TARJETAS VERTICALES: IMAGEN ARRIBA, TEXTOS ABAJO
        ========================================= */
-    .catalogo-tarjetas {
+.catalogo-tarjetas {
         display: grid !important;
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) !important; /* Vuelven a entrar de a dos o una en columnas cómodas */
-        gap: 15px !important;
+        /* Cambiamos a 3 columnas automáticas con un tamaño mínimo más compacto */
+        grid-template-columns: repeat(3, 1fr) !important; 
+        gap: 8px !important; /* Espacio más chico entre tarjetas para que entren bien */
         width: 100% !important;
+        padding: 5px !important;
     }
 
+    /* Ajustamos un poco los textos e imágenes para que entren perfectos de a 3 */
     .tarjeta {
-        display: flex !important;
-        flex-direction: column !important; /* TODO EN COLUMNA: Imagen arriba, textos abajo */
-        align-items: stretch !important;
-        padding: 12px !important;
-        gap: 8px !important;
-        width: 100% !important;
+        padding: 8px !important;
+        gap: 6px !important;
     }
 
-    /* 1. IMAGEN ARRIBA (Ocupando todo el ancho de la tarjeta) */
     .img-producto {
-        width: 100% !important;
-        height: 130px !important; /* Un alto proporcional para celulares */
-        min-width: 100% !important;
-        border-radius: 10px !important;
+        height: 80px !important; /* Imagen un poquito más chica para el formato de 3 columnas */
     }
 
-    /* Contenedor de los textos debajo de la imagen */
-    .tarjeta > div:not(.acciones-carrito) {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 4px !important;
-        width: 100% !important;
-    }
-
-    .titulo-precio {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        width: 100% !important;
-        margin: 0 !important;
-        gap: 2px !important;
-    }
-
-    /* 2. TÍTULO */
     .tarjeta h3 {
-        font-size: 15px !important;
-        font-weight: bold !important;
-        margin: 0 !important;
-        text-align: left !important;
+        font-size: 12px !important; /* Título compacto */
     }
 
-    /* 3. DESCRIPCIÓN EN EL MEDIO (Sin recortes raros) */
     .descripcion-producto {
-        font-size: 11px !important;
-        color: #64748b !important;
-        display: block !important;
-        -webkit-line-clamp: unset !important;
-        overflow: visible !important;
-        margin: 2px 0 4px 0 !important;
-        text-align: left !important;
-        width: 100% !important;
+        font-size: 10px !important; /* Descripción pequeña y legible */
     }
 
-    /* 4. PRECIO ABAJO DE TODO */
     .precio-tarjetas {
-        font-size: 15px !important;
-        font-weight: 700 !important;
-        color: #9b482f !important;
-        text-align: left !important;
-        margin: 0 !important;
-    }
-
-    /* Ocultamos los botones de sumar/restar en esta vista general para mantener la prolijidad */
-    .acciones-carrito {
-        display: none !important;
+        font-size: 13px !important; /* Precio destacado pero compacto */
     }
 }
