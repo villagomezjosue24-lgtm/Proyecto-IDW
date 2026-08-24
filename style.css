@@ -634,7 +634,9 @@ p {
     .curiosidades h2 {
         text-align: center;
     }
-    .contenido-central {
-        display: none; 
+.contenido-central {
+        display: flex !important;
+        padding: 20px;
+        width: 100%;
     }
 }
