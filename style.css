@@ -773,4 +773,28 @@ p {
         object-fit: cover !important;
         border-radius: 6px !important;
     }
+    .formulario {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 15px !important;
+        box-sizing: border-box !important;
+        gap: 12px !important;
+    }
+
+    .formulario h2 {
+        grid-column: unset !important;
+    }
+
+    .campo, .campo-completo {
+        width: 100% !important;
+        grid-column: unset !important;
+    }
+
+    .campo input, .campo textarea {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
 }
