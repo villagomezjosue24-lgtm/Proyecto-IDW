@@ -624,6 +624,7 @@ p {
     .barra-lateral li {
         margin-bottom: 15px !important;
     }
+
     .curiosidades {
         margin-top: 15px !important;
         margin-bottom: 0 !important;
@@ -635,40 +636,35 @@ p {
         padding: 10px 15px 20px 15px !important;
         width: 100%;
     }
-    /* =========================================
-       TARJETAS VERTICALES: IMAGEN ARRIBA, TEXTOS ABAJO
-       ========================================= */
-.catalogo-tarjetas {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important; 
-    gap: 4px !important; /* Espacio mínimo para ganar lugar */
-    width: 100% !important;
-    padding: 2px !important;
-}
+    .catalogo-tarjetas {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important; 
+        gap: 4px !important; 
+        width: 100% !important;
+        padding: 2px !important;
+    }
 
-.tarjeta {
-    padding: 6px !important;
-    gap: 4px !important;
-}
+    .tarjeta {
+        padding: 8px !important;
+        gap: 6px !important;
+    }
 
-.img-producto {
-    height: 65px !important; /* Imagen más compacta para que entren los 3 */
-}
+    .img-producto {
+        height: 80px !important; 
+    }
 
-.tarjeta h3 {
-    font-size: 11px !important; /* Título pequeño */
-}
+    .tarjeta h3 {
+        font-size: 12px !important; 
+    }
 
-.descripcion-producto {
-    font-size: 9px !important; /* Descripción muy compacta */
-}
+    .descripcion-producto {
+        font-size: 10px !important; 
+    }
 
-.precio-tarjetas {
-    font-size: 12px !important;
-}
-/* =========================================
-       MENÚ CARRUSEL COMPACTO (4 palabras visibles)
-       ========================================= */
+    .precio-tarjetas {
+        font-size: 13px !important; 
+    }
+    
     .contenedor-carrusel {
         gap: 5px !important;
         margin-bottom: 20px !important;
@@ -677,22 +673,37 @@ p {
     }
 
     .menu-categorias {
-        gap: 8px !important; /* Menos espacio entre botones */
+        gap: 8px !important; 
         padding: 2px !important;
         max-width: 100% !important;
     }
 
-    /* Achicamos los botones para que entren 4 en fila */
     .btn-categoria {
-        padding: 6px 12px !important; /* Menos relleno interno */
-        font-size: 12px !important;   /* Letra más compacta */
+        padding: 6px 12px !important; 
+        font-size: 12px !important;   
         border-radius: 18px !important;
     }
 
-    /* Achicamos también un poco las flechas de desplazamiento lateral */
     .flecha-scroll {
         width: 28px !important;
         height: 28px !important;
         font-size: 11px !important;
+    }
+    
+    .resumen-carrito .img-mini, 
+    .item-resumen img, 
+    .lista-productos-resumen img {
+        width: 50px !important;
+        height: 50px !important;
+        min-width: 50px !important;
+        object-fit: cover !important;
+        border-radius: 8px !important;
+    }
+
+    .resumen-carrito {
+        width: 92% !important;
+        max-width: 100% !important;
+        margin: 20px auto !important;
+        padding: 20px 15px !important;
     }
 }
