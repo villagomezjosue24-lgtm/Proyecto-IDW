@@ -267,7 +267,7 @@ p {
 .contenedor-carrusel {
     position: fixed;
     top: 0;
-    left: 225px;
+    left: 250px;
     right: 0;
     z-index: 999;
     background-color: transparent;
