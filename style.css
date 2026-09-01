@@ -853,15 +853,22 @@ p {
         text-align: center
     }
 
-    .contenedor-carrusel {
-        gap: 3px;
-        margin-bottom: 10px;
-        padding-top: 0;
-        width: 100%
+.contenedor-carrusel {
+        position: static;
+        width: 100%;
+        background-color: #fff4ed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        margin: 10px 0 15px 0;
+        padding: 8px 10px;
+        box-shadow: none;
+        border-radius: 12px;
     }
 
     .menu-categorias {
-        gap: 4px;
+        gap: 6px;
         padding: 2px;
         max-width: 100%
     }
