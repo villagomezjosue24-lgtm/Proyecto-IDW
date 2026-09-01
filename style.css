@@ -270,7 +270,7 @@ p {
     left: 250px;
     right: 0;
     z-index: 999;
-    background-color: #ffffff; 
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -854,7 +854,7 @@ p {
         width: 100%;
         text-align: center
     }
-
+/*
     .contenedor-carrusel {
         position: static;
         left: auto;
@@ -863,10 +863,24 @@ p {
         gap: 5px;
         margin-bottom: 15px;
         padding-top: 5px;
-        background-color: transparent;
+        
         box-shadow: none;
+    }*/
+.contenedor-carrusel {
+        position: sticky;
+        top: 45px; 
+        left: 0;
+        right: 0;
+        z-index: 999;
+       background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        margin-bottom: 15px;
+        padding: 8px 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     }
-
     .menu-categorias {
         gap: 6px;
         padding: 2px;
