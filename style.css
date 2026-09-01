@@ -784,7 +784,7 @@ p {
     .catalogo-tarjetas {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 4px;
+        gap: 5px;
         width: 100%;
         max-width: 100%;
         padding: 0;
@@ -792,10 +792,10 @@ p {
     }
 
     .tarjeta {
-        padding: 8px;
-        gap: 6px;
+        padding: 6px;
+        gap: 4px;
         box-sizing: border-box;
-        border-radius: 12px
+        border-radius: 10px
     }
 
     .img-producto {
