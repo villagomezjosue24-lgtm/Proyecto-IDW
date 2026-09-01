@@ -783,8 +783,8 @@ p {
 
     .catalogo-tarjetas {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4px;
         width: 100%;
         max-width: 100%;
         padding: 0;
@@ -856,14 +856,16 @@ p {
     }
     .contenedor-carrusel {
         position: static;
-        left: auto;
-        right: auto;
         width: 100%;
+        background-color: #fff4ed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         gap: 5px;
-        margin-bottom: 15px;
-        padding-top: 5px;
-        
+        margin: 10px 0 15px 0;
+        padding: 8px 10px;
         box-shadow: none;
+        border-radius: 12px;
     }
     .menu-categorias {
         gap: 6px;
