@@ -399,7 +399,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
                 //  Número de WhatsApp (Incluye código de país y área, sin símbolos ni espacios)
-                const numeroWhatsApp = "5493875466535";
+                const numeroWhatsApp = "123215646876610";
                 let totalGeneral = 0;
 
                 // Mensaje que se enviará, incluyendo los productos y cantidades
